@@ -1,0 +1,7 @@
+<div class="profile-container">
+  @if (user(); as user) {
+    <h1>Welcome, {{ user.email }}</h1>
+  } @else {
+    <p>Loading user information...</p>
+  }
+</div>

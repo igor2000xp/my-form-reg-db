@@ -1,0 +1,11 @@
+<nav>
+  <ul>
+    @if (authService.currentUser | async) {
+      <li><a routerLink="/profile">Profile</a></li>
+      <li><button (click)="logout()">Logout</button></li>
+    } @else {
+      <li><a routerLink="/login">Login</a></li>
+      <li><a routerLink="/register">Register</a></li>
+    }
+  </ul>
+</nav>
