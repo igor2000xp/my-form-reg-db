@@ -1,32 +1,23 @@
-# Project Blueprint
+# Blueprint
 
 ## Overview
 
-This is an Angular application with Firebase authentication. It allows users to register, log in, and view their profile.
+This project is a form-based registration application with a database backend. It's built with the latest Angular features, including standalone components, signals for state management, and modern control flow syntax. The application will feature user authentication and a reactive registration form.
 
-## Style, Design, and Features
+## Implemented Features
 
-### Style
+### Project Setup
+- Initial Angular project structure.
+- Firebase SDKs for authentication integrated.
+- Basic routing configuration.
+- Strict TypeScript settings and modern Angular best practices enforced.
 
-* **Styling:** Modern CSS with a clean and simple design.
-* **Layout:** Responsive layout that works on both mobile and web.
-* **Color Palette:** A simple color palette with a primary color for buttons and links.
-* **Typography:** Clear and readable typography.
+### Styling & Design
+- Global styles file is set up, but no specific design has been implemented yet.
 
-### Design
+## Current Task: Add Environment Files
 
-* **Components:** The application is built with standalone components.
-* **State Management:** Component state is managed using signals.
-* **Routing:** The application uses the Angular router for navigation.
-* **Navigation:** A navigation component that displays links based on the user's authentication status.
-
-### Features
-
-* **User Authentication:** Users can register, log in, and log out.
-* **Firebase Integration:** The application is integrated with Firebase for authentication.
-* **Profile Page:** Logged-in users can view their profile information.
-* **Route Protection:** The profile page is protected and can only be accessed by authenticated users.
-
-## Current Plan
-
-I have created a navigation component and now the basic authentication flow is complete. I will now await further instructions.
+### Plan
+1.  **Create Environment Directory:** A new directory `src/environments` will be created to hold environment-specific configuration files.
+2.  **Create Development Environment File:** Create `src/environments/environment.ts`. This file will contain configuration for the development environment, including `production: false` and placeholder credentials for Firebase.
+3.  **Create Production Environment File:** Create `src/environments/environment.prod.ts`. This file will contain configuration for the production environment, including `production: true` and placeholder credentials for Firebase. This setup allows for different settings (like API keys) between development and production builds.
