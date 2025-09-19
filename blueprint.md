@@ -15,9 +15,12 @@ This project is a form-based registration application with a database backend. I
 ### Styling & Design
 - Global styles file is set up, but no specific design has been implemented yet.
 
-## Current Task: Add Environment Files
+### Authentication
+- **Logout Functionality:** Implemented a streamlined, async logout method in `AuthService` that signs the user out from Firebase, clears local session data, and redirects to the login page. The navigation component was updated to correctly invoke this method.
+
+## Current Task: Improve Logout Functionality
 
 ### Plan
-1.  **Create Environment Directory:** A new directory `src/environments` will be created to hold environment-specific configuration files.
-2.  **Create Development Environment File:** Create `src/environments/environment.ts`. This file will contain configuration for the development environment, including `production: false` and placeholder credentials for Firebase.
-3.  **Create Production Environment File:** Create `src/environments/environment.prod.ts`. This file will contain configuration for the production environment, including `production: true` and placeholder credentials for Firebase. This setup allows for different settings (like API keys) between development and production builds.
+1.  **Simplify `AuthService`:** Refactor the `logout` method in `auth.service.ts` to be a simple `async` function that signs the user out and navigates to the login page.
+2.  **Update Navigation Component:** Modify the `logout` method in `navigation.ts` to correctly call the new `async` `logout` method in `AuthService`.
+3.  **Verify Changes:** Run `ng build` to ensure that the changes do not introduce any compilation errors.

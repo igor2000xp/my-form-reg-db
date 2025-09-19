@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 export class Navigation {
   authService = inject(AuthService);
 
-  logout() {
-    this.authService.logout();
+  async logout(): Promise<void> {
+    await this.authService.logout();
   }
 }
