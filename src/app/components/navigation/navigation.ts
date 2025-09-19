@@ -11,7 +11,11 @@ import { CommonModule } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Navigation {
-  authService = inject(AuthService);
+  private authService = inject(AuthService);
+
+  // Expose signal-based properties for template
+  readonly isAuthenticated = this.authService.isAuthenticated;
+  readonly userEmail = this.authService.userEmail;
 
   async logout(): Promise<void> {
     await this.authService.logout();
