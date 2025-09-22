@@ -11,7 +11,7 @@ import {
   UserCredential
 } from 'firebase/auth';
 import { from, Observable } from 'rxjs';
-import { map, catchError, tap } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
