@@ -1,32 +1,26 @@
-# Project Blueprint
+# Blueprint
 
 ## Overview
 
-This is an Angular application with Firebase authentication. It allows users to register, log in, and view their profile.
+This project is a form-based registration application with a database backend. It's built with the latest Angular features, including standalone components, signals for state management, and modern control flow syntax. The application will feature user authentication and a reactive registration form.
 
-## Style, Design, and Features
+## Implemented Features
 
-### Style
+### Project Setup
+- Initial Angular project structure.
+- Firebase SDKs for authentication integrated.
+- Basic routing configuration.
+- Strict TypeScript settings and modern Angular best practices enforced.
 
-* **Styling:** Modern CSS with a clean and simple design.
-* **Layout:** Responsive layout that works on both mobile and web.
-* **Color Palette:** A simple color palette with a primary color for buttons and links.
-* **Typography:** Clear and readable typography.
+### Styling & Design
+- Global styles file is set up, but no specific design has been implemented yet.
 
-### Design
+### Authentication
+- **Logout Functionality:** Implemented a streamlined, async logout method in `AuthService` that signs the user out from Firebase, clears local session data, and redirects to the login page. The navigation component was updated to correctly invoke this method.
 
-* **Components:** The application is built with standalone components.
-* **State Management:** Component state is managed using signals.
-* **Routing:** The application uses the Angular router for navigation.
-* **Navigation:** A navigation component that displays links based on the user's authentication status.
+## Current Task: Improve Logout Functionality
 
-### Features
-
-* **User Authentication:** Users can register, log in, and log out.
-* **Firebase Integration:** The application is integrated with Firebase for authentication.
-* **Profile Page:** Logged-in users can view their profile information.
-* **Route Protection:** The profile page is protected and can only be accessed by authenticated users.
-
-## Current Plan
-
-I have created a navigation component and now the basic authentication flow is complete. I will now await further instructions.
+### Plan
+1.  **Simplify `AuthService`:** Refactor the `logout` method in `auth.service.ts` to be a simple `async` function that signs the user out and navigates to the login page.
+2.  **Update Navigation Component:** Modify the `logout` method in `navigation.ts` to correctly call the new `async` `logout` method in `AuthService`.
+3.  **Verify Changes:** Run `ng build` to ensure that the changes do not introduce any compilation errors.

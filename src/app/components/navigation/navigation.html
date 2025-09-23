@@ -1,6 +1,6 @@
 <nav>
   <ul>
-    @if (authService.currentUser | async) {
+    @if (isAuthenticated()) {
       <li><a routerLink="/profile">Profile</a></li>
       <li><button (click)="logout()">Logout</button></li>
     } @else {
