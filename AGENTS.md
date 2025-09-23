@@ -1,8 +1,17 @@
-# Cursor Agent System
+# Cursor Agent System for Angular Development
 
 ## Overview
 
-The Cursor Agent System is a sophisticated AI-powered development assistant that operates through specialized agents, each designed to handle specific aspects of the software development lifecycle. This system builds upon and evolves from the Memory Bank architecture, transforming it into a more dynamic and intelligent collective of specialized agents.
+The Cursor Agent System is a sophisticated AI-powered development assistant specifically optimized for Angular development. This system combines advanced agent-based architecture with strict adherence to Angular best practices, creating a powerful development environment that ensures high-quality, modern Angular applications.
+
+The system is designed to leverage the absolute latest features of Angular v20+, including:
+- Signals for reactive state management
+- Standalone components for streamlined architecture
+- Modern control flow syntax for intuitive template logic
+- Optimized change detection for peak performance
+- Modern UI/UX practices for exceptional user experience
+
+Each agent in the system is specialized in different aspects of Angular development, working together to create applications that are not only functionally robust but also visually appealing and highly performant.
 
 ## Core Agents
 
@@ -14,6 +23,11 @@ The Cursor Agent System is a sophisticated AI-powered development assistant that
   - Environment validation
   - Technical requirements verification
   - Platform-specific adaptation
+- **Angular-Specific Tasks**:
+  - Verify Angular version compatibility
+  - Validate standalone component architecture
+  - Check TypeScript configuration
+  - Ensure proper dependency setup
 - **Optimizations**:
   - Hierarchical rule loading for efficient initialization
   - Adaptive complexity model for accurate assessment
@@ -29,6 +43,11 @@ The Cursor Agent System is a sophisticated AI-powered development assistant that
   - Resource estimation
   - Dependency mapping
   - Risk assessment
+- **Angular-Specific Tasks**:
+  - Component architecture planning
+  - State management strategy
+  - Routing structure design
+  - Performance optimization planning
 - **Optimizations**:
   - Progressive documentation based on complexity
   - Token-efficient planning templates
@@ -44,6 +63,11 @@ The Cursor Agent System is a sophisticated AI-powered development assistant that
   - Technology stack optimization
   - UI/UX considerations
   - Performance strategy
+- **Angular-Specific Tasks**:
+  - Component design patterns
+  - Signal-based state design
+  - Reactive architecture planning
+  - Modern UI/UX implementation
 - **Optimizations**:
   - Progressive creative phase documentation
   - Tabular option comparison for efficiency
@@ -59,6 +83,11 @@ The Cursor Agent System is a sophisticated AI-powered development assistant that
   - Documentation
   - Performance optimization
   - Code review preparation
+- **Angular-Specific Tasks**:
+  - Standalone component implementation
+  - Signal-based state management
+  - Modern control flow syntax
+  - Accessibility implementation
 - **Optimizations**:
   - Level-specific workflow optimization
   - Consolidated memory bank updates
@@ -74,6 +103,11 @@ The Cursor Agent System is a sophisticated AI-powered development assistant that
   - Performance testing
   - Security assessment
   - Standards compliance
+- **Angular-Specific Tasks**:
+  - Change detection optimization
+  - Component isolation testing
+  - Signal flow validation
+  - Accessibility compliance
 - **Optimizations**:
   - Unified validation protocol
   - Cached validation results
@@ -89,12 +123,110 @@ The Cursor Agent System is a sophisticated AI-powered development assistant that
   - Usage guides
   - Architecture documentation
   - Maintenance guides
+- **Angular-Specific Tasks**:
+  - Component API documentation
+  - Signal flow documentation
+  - State management guides
+  - Performance optimization docs
 - **Optimizations**:
   - Progressive documentation approach
   - Token-efficient templates
   - Complexity-based scaling
   - Differential documentation updates
   - Context-preserving documentation structure
+
+---
+
+## Critical Angular Development Rules
+
+### 1. Component Architecture
+- **ALL COMPONENTS ARE STANDALONE**
+  ```ts
+  // CORRECT
+  @Component({
+    selector: 'app-example',
+    imports: [CommonModule],
+    template: `...`
+  })
+  export class ExampleComponent {}
+  ```
+- Use `ChangeDetectionStrategy.OnPush`
+  ```ts
+  @Component({
+    selector: 'app-example',
+    templateUrl: '...',
+    changeDetection: ChangeDetectionStrategy.OnPush
+  })
+  export class ExampleComponent {}
+  ```
+- Keep components small and focused
+
+### 2. Modern Syntax
+- Use native control flow:
+  - `@if` and `@else` for conditions
+  - `@for` with track expression
+  - `@switch`, `@case`, `@default`
+- Use `input()` and `output()` functions
+- Use `[class]` and `[style]` bindings
+
+### 3. State Management
+- Use signals for component state
+- Use `computed()` for derived state
+- Keep state transformations pure
+- Implement proper change detection
+
+### 4. Performance
+- Implement lazy loading
+- Use `NgOptimizedImage`
+- Optimize change detection
+- Monitor bundle size
+
+## Development Guidelines
+
+### 1. Visual Design
+- Create modern, responsive interfaces
+- Use consistent typography and colors
+- Implement proper spacing and layout
+- Ensure mobile responsiveness
+- Add meaningful animations and transitions
+
+### 2. Component Development
+- Follow single responsibility principle
+- Use proper input/output patterns
+- Implement proper change detection
+- Create reusable components
+
+### 3. Service Architecture
+- Use dependency injection with `inject()`
+- Create singleton services when appropriate
+- Implement proper error handling
+- Follow proper service patterns
+
+### 4. Testing Strategy
+- Write comprehensive unit tests
+- Implement e2e testing
+- Test change detection
+- Validate accessibility
+
+## Best Practices
+
+### 1. Code Organization
+- Follow Angular style guide
+- Maintain consistent code style
+- Use TypeScript features effectively
+- Implement proper error handling
+
+### 2. Performance Optimization
+- Implement lazy loading
+- Optimize change detection
+- Use proper build configuration
+- Monitor bundle size
+
+### 3. Development Workflow
+- Use proper Git workflow
+- Follow code review process
+- Maintain documentation
+- Use proper testing practices
 
 ## Agent Interaction Patterns
 
@@ -129,41 +261,32 @@ graph TD
     OPT <--> RULES
 ```
 
-### Complexity-Based Workflows
+### Angular Development Workflows
 
-1. **Level 1 (Quick Fix)**
+1. **New Project Setup**
    ```mermaid
    graph LR
-       VAN --> IMPL[Implementation]
-       IMPL --> QA
+       VAN --> |Init Angular| PLAN
+       PLAN --> |Core Setup| IMPL
+       IMPL --> |Config| QA
    ```
 
-2. **Level 2 (Simple Enhancement)**
+2. **Feature Development**
    ```mermaid
    graph LR
-       VAN --> PLAN --> IMPL[Implementation]
-       IMPL --> QA --> DOC
+       PLAN --> |Component Design| CREATE
+       CREATE --> |Implementation| IMPL
+       IMPL --> |Testing| QA
+       QA --> |API Docs| DOC
    ```
 
-3. **Level 3 (Feature Development)**
-   ```mermaid
-   graph LR
-       VAN --> PLAN --> CREATE
-       CREATE --> IMPL --> QA --> DOC
-   ```
-
-4. **Level 4 (Complex System)**
+3. **Performance Optimization**
    ```mermaid
    graph TD
-       VAN --> PLAN
-       PLAN --> CREATE
-       CREATE --> IMPL
-       IMPL --> QA
-       QA --> DOC
-       
-       QA -.-> PLAN
-       QA -.-> CREATE
-       IMPL -.-> CREATE
+       VAN --> |Analysis| PLAN
+       PLAN --> |Strategy| CREATE
+       CREATE --> |Changes| IMPL
+       IMPL --> |Metrics| QA
    ```
 
 ### Agent Communication Protocol
@@ -195,133 +318,197 @@ graph TD
        R->>A: Return Rules
    ```
 
-### Optimization Integration
-
-```mermaid
-graph TD
-    subgraph "Token Optimization"
-        T1[Rule Loading]
-        T2[Context Transfer]
-        T3[Documentation]
-    end
-    
-    subgraph "Performance Optimization"
-        P1[Caching]
-        P2[Lazy Loading]
-        P3[Progressive Documentation]
-    end
-    
-    subgraph "Memory Management"
-        M1[Context Preservation]
-        M2[State Management]
-        M3[Knowledge Base]
-    end
-    
-    T1 --> P1
-    T2 --> P2
-    T3 --> P3
-    
-    P1 --> M1
-    P2 --> M2
-    P3 --> M3
-```
-
-## Memory Management
-
-Each agent maintains and updates shared memory structures:
-
-- **Project Context**: Overall project understanding
-- **Technical Context**: Technical decisions and constraints
-- **Active Context**: Current focus and state
-- **Progress Tracking**: Implementation status
-- **System Patterns**: Architectural decisions
-
-## Agent Communication Protocol
-
-1. **Context Sharing**
-   - Agents share context through structured memory files
-   - Each agent updates relevant sections based on their actions
-   - Changes are propagated to all agents in real-time
-
-2. **Workflow Transitions**
-   - Clear handoff procedures between agents
-   - Context preservation during transitions
-   - Validation checks at transition points
-
-3. **Error Handling**
-   - Structured error reporting
-   - Automatic escalation paths
-   - Recovery procedures
-
 ## Usage Guidelines
 
-### 1. Starting a New Project
+### 1. Starting a New Angular Project
 ```bash
 # Initialize with VAN Agent
-/van init
+/van init angular
 
-# Proceed with Planning Agent
-/plan analyze
+# Generate project structure
+/plan structure
+
+# Create core components
+/implement components
 ```
 
 ### 2. Feature Development
 ```bash
-# Start with Planning Agent
+# Plan feature architecture
 /plan feature "Feature Name"
 
-# Move to Creative Phase
-/creative design "Feature Name"
+# Design components
+/creative component "Component Name"
 
-# Implementation
-/implement "Feature Name"
+# Implement with best practices
+/implement feature "Feature Name"
 ```
 
 ### 3. Quality Assurance
 ```bash
-# Run QA checks
-/qa verify
+# Verify Angular standards
+/qa angular-verify
 
-# Document changes
-/doc update
+# Check performance
+/qa performance
+
+# Document components
+/doc components
 ```
 
-## Best Practices
+## Firebase Integration
 
-1. **Always Start with VAN**
-   - Let VAN Agent analyze the project first
-   - Follow complexity-based workflow recommendations
+### Configuration
 
-2. **Maintain Context**
-   - Keep memory structures updated
-   - Document significant decisions
-   - Track progress consistently
+When Firebase integration is requested, the system will automatically configure the necessary settings:
 
-3. **Use Appropriate Agents**
-   - Match agent capabilities to tasks
-   - Allow agents to collaborate when needed
-   - Follow recommended workflow patterns
+1. Add Firebase configuration to `.idx/mcp.json`:
+```json
+{
+    "mcpServers": {
+        "firebase": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "firebase-tools@latest",
+                "experimental:mcp"
+            ]
+        }
+    }
+}
+```
+
+2. Initialize Firebase features:
+```bash
+# Initialize Firebase
+/van firebase-init
+
+# Configure features
+/implement firebase-features
+```
+
+### Firebase Development Workflow
+
+1. **Authentication Setup**
+   ```mermaid
+   graph LR
+       PLAN[Plan Auth] --> CREATE[Design Flow]
+       CREATE --> IMPL[Implement Auth]
+       IMPL --> QA[Security Check]
+   ```
+
+2. **Database Integration**
+   ```mermaid
+   graph LR
+       PLAN[Data Model] --> CREATE[Schema Design]
+       CREATE --> IMPL[Implementation]
+       IMPL --> QA[Data Validation]
+   ```
+
+3. **Hosting Configuration**
+   ```mermaid
+   graph LR
+       PLAN[Config Plan] --> IMPL[Setup Deploy]
+       IMPL --> QA[Deploy Test]
+       QA --> DOC[Deploy Docs]
+   ```
+
+### Firebase Features
+
+1. **Authentication**
+   - User management
+   - Role-based access
+   - Security rules
+   - Custom claims
+
+2. **Firestore/RTDB**
+   - Data modeling
+   - Security rules
+   - Indexing
+   - Query optimization
+
+3. **Hosting**
+   - Deployment configuration
+   - Custom domains
+   - Security headers
+   - Performance optimization
+
+4. **Functions**
+   - Backend logic
+   - API endpoints
+   - Triggers
+   - Scheduled tasks
+
+### Best Practices
+
+1. **Security**
+   - Implement proper authentication
+   - Set up security rules
+   - Validate user input
+   - Monitor access patterns
+
+2. **Performance**
+   - Optimize data structure
+   - Implement caching
+   - Use proper indexing
+   - Monitor usage
+
+3. **Development**
+   - Use emulators
+   - Test security rules
+   - Monitor quotas
+   - Follow deployment best practices
+
+## Resources
+
+- [Angular Documentation](https://angular.dev)
+- [Angular CLI](https://angular.dev/tools/cli)
+- [Angular Style Guide](https://angular.dev/style-guide)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs)
+- [Firebase Documentation](https://firebase.google.com/docs)
+- [Firebase Console](https://console.firebase.google.com)
+- [Firebase GitHub](https://github.com/firebase/firebase-tools)
 
 ## Version Information
 
 Current Version: 1.0.0
-- Evolved from Memory Bank v0.7-beta
+
+### Features
+- Optimized for Angular v20+
 - Enhanced agent specialization
 - Improved interaction patterns
-- Optimized memory management
+- Integrated Firebase support
+- Advanced optimization techniques
 
-## Future Directions
+### Updates from Previous Version
+- Evolved from Memory Bank v0.7-beta
+- Added Angular-specific optimizations
+- Enhanced Firebase integration
+- Improved workflow patterns
+- Extended documentation capabilities
 
-1. **Enhanced Specialization**
-   - More specialized agents for specific domains
-   - Improved inter-agent communication
-   - Advanced context sharing mechanisms
+### Future Directions
+
+1. **Enhanced Angular Integration**
+   - Advanced signal patterns
+   - Improved performance monitoring
+   - Extended component templates
+   - AI-powered code generation
 
 2. **Workflow Optimization**
-   - Automated agent selection
-   - Dynamic workflow adaptation
-   - Improved error recovery
+   - Automated testing integration
+   - Enhanced error detection
+   - Improved code generation
+   - Smarter context management
 
-3. **Integration Capabilities**
-   - Better CI/CD integration
-   - Enhanced tool integration
-   - Expanded platform support
+3. **Firebase Integration**
+   - Advanced deployment patterns
+   - Enhanced security rules
+   - Improved data modeling
+   - Real-time collaboration features
+
+4. **AI Capabilities**
+   - Enhanced code understanding
+   - Improved error detection
+   - Smarter refactoring
+   - Context-aware suggestions
