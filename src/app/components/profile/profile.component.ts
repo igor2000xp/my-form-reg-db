@@ -7,7 +7,7 @@ import { AuthService } from '../../auth/auth.service';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule]
+  imports: [CommonModule],
 })
 export class ProfileComponent {
   private authService = inject(AuthService);

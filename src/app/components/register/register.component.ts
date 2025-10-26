@@ -33,21 +33,20 @@ export class RegisterComponent {
 
       const { email, password } = this.registerForm.getRawValue();
 
-      this.authService.register(email!, password!)
-        .subscribe({
-          next: (credential) => {
-            this.isLoading.set(false);
-            console.log('Registration successful:', credential.user.email);
-            this.router.navigate(['/profile']);
-          },
-          error: (error) => {
-            this.isLoading.set(false);
-            // Handle specific Firebase auth errors
-            const errorMessage = this.getErrorMessage(error.code);
-            this.errorMessage.set(errorMessage);
-            console.error('Registration error:', error);
-          }
-        });
+      this.authService.register(email!, password!).subscribe({
+        next: credential => {
+          this.isLoading.set(false);
+          console.log('Registration successful:', credential.user.email);
+          this.router.navigate(['/profile']);
+        },
+        error: error => {
+          this.isLoading.set(false);
+          // Handle specific Firebase auth errors
+          const errorMessage = this.getErrorMessage(error.code);
+          this.errorMessage.set(errorMessage);
+          console.error('Registration error:', error);
+        },
+      });
     } else {
       // Mark all fields as touched to show validation errors
       this.registerForm.markAllAsTouched();

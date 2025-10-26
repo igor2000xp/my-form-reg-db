@@ -8,13 +8,13 @@ import {
   createUserWithEmailAndPassword,
   signOut,
   User,
-  UserCredential
+  UserCredential,
 } from 'firebase/auth';
 import { from, Observable } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   private readonly auth: Auth = inject(Auth);
@@ -46,14 +46,14 @@ export class AuthService {
    */
   register(email: string, password: string): Observable<UserCredential> {
     return from(createUserWithEmailAndPassword(this.auth, email, password)).pipe(
-      tap((credential) => {
+      tap(credential => {
         // Update signal immediately after successful registration
         this.userSignal.set(credential.user);
       }),
-      catchError((error) => {
+      catchError(error => {
         console.error('Registration error:', error);
         throw error;
-      })
+      }),
     );
   }
 
@@ -65,14 +65,14 @@ export class AuthService {
    */
   login(email: string, password: string): Observable<UserCredential> {
     return from(signInWithEmailAndPassword(this.auth, email, password)).pipe(
-      tap((credential) => {
+      tap(credential => {
         // Update signal immediately after successful login
         this.userSignal.set(credential.user);
       }),
-      catchError((error) => {
+      catchError(error => {
         console.error('Login error:', error);
         throw error;
-      })
+      }),
     );
   }
 

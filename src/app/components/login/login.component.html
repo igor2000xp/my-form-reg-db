@@ -16,8 +16,7 @@
         id="email"
         formControlName="email"
         (input)="onInputChange()"
-        [class.invalid]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
-      >
+        [class.invalid]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" />
       <!-- Email validation errors -->
       @if (loginForm.get('email')?.invalid && loginForm.get('email')?.touched) {
         <div class="field-error">
@@ -38,8 +37,9 @@
         id="password"
         formControlName="password"
         (input)="onInputChange()"
-        [class.invalid]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
-      >
+        [class.invalid]="
+          loginForm.get('password')?.invalid && loginForm.get('password')?.touched
+        " />
       <!-- Password validation errors -->
       @if (loginForm.get('password')?.invalid && loginForm.get('password')?.touched) {
         <div class="field-error">
@@ -53,8 +53,7 @@
     <button
       type="submit"
       [disabled]="loginForm.invalid || isLoading()"
-      [class.loading]="isLoading()"
-    >
+      [class.loading]="isLoading()">
       @if (isLoading()) {
         <span class="spinner"></span>
         Logging in...

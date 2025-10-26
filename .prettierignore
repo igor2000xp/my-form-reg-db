@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+coverage/
+
+# Generated files
+*.d.ts
+*.generated.ts
+*.generated.js
+
+# Third-party libraries
+**/node_modules/**
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Package manager files
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Angular specific
+.angular/
+tmp/
+
+# Firebase
+firebase-debug.log
+.firebaserc
+
+# Configuration files that should preserve formatting
+angular.json
+firebase.json
+tsconfig*.json
+
+# IDX configuration
+.idx/
+.mcp.json
+
+# Documentation that should preserve formatting
+CHANGELOG.md
+LICENSE
+README.md
+*.md

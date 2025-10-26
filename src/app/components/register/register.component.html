@@ -16,8 +16,9 @@
         id="email"
         formControlName="email"
         (input)="onInputChange()"
-        [class.invalid]="registerForm.get('email')?.invalid && registerForm.get('email')?.touched"
-      >
+        [class.invalid]="
+          registerForm.get('email')?.invalid && registerForm.get('email')?.touched
+        " />
       <!-- Email validation errors -->
       @if (registerForm.get('email')?.invalid && registerForm.get('email')?.touched) {
         <div class="field-error">
@@ -38,8 +39,9 @@
         id="password"
         formControlName="password"
         (input)="onInputChange()"
-        [class.invalid]="registerForm.get('password')?.invalid && registerForm.get('password')?.touched"
-      >
+        [class.invalid]="
+          registerForm.get('password')?.invalid && registerForm.get('password')?.touched
+        " />
       <!-- Password validation errors -->
       @if (registerForm.get('password')?.invalid && registerForm.get('password')?.touched) {
         <div class="field-error">
@@ -56,8 +58,7 @@
     <button
       type="submit"
       [disabled]="registerForm.invalid || isLoading()"
-      [class.loading]="isLoading()"
-    >
+      [class.loading]="isLoading()">
       @if (isLoading()) {
         <span class="spinner"></span>
         Creating account...

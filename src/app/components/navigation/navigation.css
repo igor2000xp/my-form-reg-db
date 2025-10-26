@@ -11,7 +11,8 @@ ul {
   gap: 1rem;
 }
 
-a, button {
+a,
+button {
   color: white;
   text-decoration: none;
   background: none;
@@ -20,6 +21,7 @@ a, button {
   font-size: 1rem;
 }
 
-a:hover, button:hover {
+a:hover,
+button:hover {
   text-decoration: underline;
 }

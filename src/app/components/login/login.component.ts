@@ -33,21 +33,20 @@ export class LoginComponent {
 
       const { email, password } = this.loginForm.getRawValue();
 
-      this.authService.login(email!, password!)
-        .subscribe({
-          next: (credential) => {
-            this.isLoading.set(false);
-            console.log('Login successful:', credential.user.email);
-            this.router.navigate(['/profile']);
-          },
-          error: (error) => {
-            this.isLoading.set(false);
-            // Handle specific Firebase auth errors
-            const errorMessage = this.getErrorMessage(error.code);
-            this.errorMessage.set(errorMessage);
-            console.error('Login error:', error);
-          }
-        });
+      this.authService.login(email!, password!).subscribe({
+        next: credential => {
+          this.isLoading.set(false);
+          console.log('Login successful:', credential.user.email);
+          this.router.navigate(['/profile']);
+        },
+        error: error => {
+          this.isLoading.set(false);
+          // Handle specific Firebase auth errors
+          const errorMessage = this.getErrorMessage(error.code);
+          this.errorMessage.set(errorMessage);
+          console.error('Login error:', error);
+        },
+      });
     } else {
       // Mark all fields as touched to show validation errors
       this.loginForm.markAllAsTouched();
