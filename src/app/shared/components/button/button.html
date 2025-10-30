@@ -1,0 +1,17 @@
+<!-- src/app/shared/components/button/button.component.html -->
+
+<button
+  [type]="type()"
+  [disabled]="!isInteractive()"
+  [attr.aria-label]="ariaLabel()"
+  [attr.aria-busy]="loading()"
+  [ngClass]="cssClasses()"
+  (click)="onClick($event)">
+  @if (loading()) {
+    <span class="btn__spinner" aria-hidden="true"></span>
+  }
+
+  <span class="btn__content" [class.btn__content--hidden]="loading()">
+    <ng-content></ng-content>
+  </span>
+</button>
