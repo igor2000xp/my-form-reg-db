@@ -66,7 +66,7 @@ button:disabled {
 }
 
 button.loading {
-  background-color: #6c757d;
+  background-color: rgb(144, 86, 124);
 }
 
 /* Error message styles */
